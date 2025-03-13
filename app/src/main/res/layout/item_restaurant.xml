@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_10"
+    android:layout_marginTop="@dimen/dp_10"
+    app:cardCornerRadius="@dimen/dp_10"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_restaurant_item"
+        android:layout_width="match_parent"
+        android:background="?attr/colorBgCard"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_restaurant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/str_name"
+            android:textColor="?attr/colorBlackWhite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_restaurant_name_value"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier_end"
+            android:textColor="?attr/colorBlackWhite"
+            app:layout_constraintTop_toTopOf="@+id/tv_restaurant_name"
+            tools:text="@string/str_restaurant_name_value" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_restaurant_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorBlackWhite"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/str_address"
+            app:layout_constraintStart_toStartOf="@id/tv_restaurant_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_restaurant_name_value" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_restaurant_address_value"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="?attr/colorBlackWhite"
+            app:layout_constraintStart_toEndOf="@+id/barrier_end"
+            app:layout_constraintTop_toTopOf="@+id/tv_restaurant_address"
+            tools:text="@string/str_restaurant_address_value" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_restaurant_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorBlackWhite"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/str_category"
+            app:layout_constraintStart_toStartOf="@id/tv_restaurant_address"
+            app:layout_constraintTop_toBottomOf="@id/tv_restaurant_address_value" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_restaurant_category_value"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="?attr/colorBlackWhite"
+            app:layout_constraintStart_toEndOf="@+id/tv_restaurant_category"
+            app:layout_constraintTop_toTopOf="@+id/tv_restaurant_category"
+            tools:text="Restaurant category value" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="tv_restaurant_category" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_restaurant_review"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_margin="@dimen/dp_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_category_value"
+            app:srcCompat="@drawable/ic_review" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_restaurant_dislike"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_margin="@dimen/dp_10"
+            app:layout_constraintStart_toEndOf="@id/iv_restaurant_review"
+            app:layout_constraintTop_toBottomOf="@+id/tv_restaurant_category_value"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/ic_disliked_default" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorWhiteBlack" format="color" />
+    <attr name="colorBlackWhite" format="color" />
+    <attr name="colorBgCard" format="color" />
+</resources>

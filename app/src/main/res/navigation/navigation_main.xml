@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/fragmentLanding">
+
+    <fragment
+        android:id="@+id/fragmentLanding"
+        android:name="com.example.restaurants.views.LandingFragment" />
+
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.restaurants.views.OnboardingFragment" />
+
+    <fragment
+        android:id="@+id/fragmentRestaurantList"
+        android:name="com.example.restaurants.views.RestaurantListFragment" />
+
+    <fragment
+        android:id="@+id/fragmentReviewList"
+        android:name="com.example.restaurants.views.ReviewListFragment" />
+</navigation>
